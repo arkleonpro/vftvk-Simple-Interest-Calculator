@@ -1,16 +1,74 @@
+
+<!DOCTYPE html>
+
 <html>
+<!--Exercise 2: Completed Steps 1 to 12 -->
+<!--1. Doctype is missing. Add the doctype.-->
+
     <head>
-    <script src="script.js"></script>
-    <link rel="stylesheet" href="style.css">
+        <!--2. Add "Simple Interest Calculator" as title.-->
+        <title>Simple Interest Calculator</title>
+        <script src="script.js"></script>
+        <link rel="stylesheet" href="style.css">
     </head>
+    
     <body>
-        <h1>Simple Interest Calculator</h1>
+        <!--3. Move all the content which currently is in the <body> to a <div> tag.-->
+        <!--4. Set the class attribute of this div to 'maindiv'.-->
+        <div class="maindiv">
+            <h1>Simple Interest Calculator</h1>
 
-        Amount <input type="number"  id="principal">  <br/>
-        Rate <input type="number"  id="rate">  <br/>
-        No. of Years <input type="number"  id="years">  <br/>
-        Interest : <span id="result"></span><br>
+                <!--adding div 'innerdiv' to match the picture the NGO wants-->
+                <div class="innerdiv">
+                    <!--using tab special characters "&ensp;" to match the picture the NGO wants-->
+                    Amount &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&nbsp; <input type="number"  id="principal">  <br/>
+                    <!--5. Modify the input text box for interest rate to a slider using the <input type="range"> tag.-->
+                    <!--6. For the rate input, set the attributes min to 1, max to 20 and step to 0.25 and the default value to 10.25.-->
+                    <br/>
+                    <!--modifying "Rate" to "Interest Rate" to match the picture the NGO wants-->
+                    Interest Rate &ensp;&ensp; <input type="range"  id="rate" min="1" max="20" step="0.25" value="10.25" onchange="updateRate()">  
+                    <!--From Exercise 4, link function updateRate() with an "onchange" event on the range input.-->
 
-        <button onclick="compute()">Compute</button>
+                        <!--7. To show the value selected by the range, create a <span> element right after the range.-->
+                        <!--8. Inside the tag add the text "10.25 %".-->
+                        <span id="rate_val"> 
+                            10.25%
+                        </span>
+                        <br/>
+                    <br/>
+                    No. of Years &ensp; &ensp;
+                        <!--9. Modify the input text box for "No of years" into a dropdown box with options 1 to 10.-->
+                        <select id="years">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                        </select>            
+                        <br/>   
+                    <br/>
+                    <!--10. Change the name of "Compute" button to "Compute Interest".-->
+                    <!--For Exercise 4, before we start writing any javascript, make sure that the button in html file has the onclick attribute set to "compute()"-->                         
+                    <button type="submit" onclick="compute()">Compute Interest</button>
+                    <br/>
+                    <br/>
+                    <!--11. Below the "Compute Interest" button create an empty <span> and set its id to 'result'.-->
+                    <span id="result">
+
+                    </span> 
+                    <br/>
+                </div>
+            <!--12. Add a copyright message using the <footer> tag.-->
+            <footer>
+                    &#169; This Calculator belongs to Arkleonpro
+            </footer>
+
+        </div>    
     </body>
+
 </html>

@@ -1,4 +1,26 @@
-body {background-color:tan;}
-h1{color:green;}
+/*Exercise 3: Completed Steps 1 to 8 */
+/*1. On the file explorer navigate to the style sheet.*/
+/*2. Set the body color to 'black', font to arial and font color to white.*/
+body {background-color:black;font-family:arial;color:white}
+/*3. Set the <h1> color to 'grey' and font to verdana.*/
+h1{color:grey;font-family:verdana}
+/*4. Create an entry for class 'maindiv'.*/
+.maindiv {
+    /*5. Set the background color to white, font color to black, width to 300 pixels, and padding to 20px in the newly created maindiv class.*/
+    background-color:white;
+    color:black;
+    /*adjusted width to 500 px*/
+    width: 500px;
+    padding: 20px;
+    /*6. Set the border radius to 25 px.*/
+    border-radius: 25px;
+    /*7. Align the div to the center of the page. (align:center does not work. Used margin: auto instead. */
+    margin: auto
+}
 
-
+/*added entry for class 'innerdiv' to match the picture the NGO wants*/
+.innerdiv {
+    width: 350px;
+    margin: auto    
+}
+/*8. Visualize your html file in the browser and make sure that you have not missed anything.*/
